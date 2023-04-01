@@ -1,0 +1,24 @@
+{
+  "name": "api_automation_course",
+  "version": "1.0.0",
+  "description": "ini adalah learning api automation saya",
+  "main": "index.js",
+  "scripts": {
+    "test": "test-api"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DhonyImamS/hikma_course_api.git"
+  },
+  "author": "DhonyImamS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DhonyImamS/hikma_course_api/issues"
+  },
+  "homepage": "https://github.com/DhonyImamS/hikma_course_api#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}
