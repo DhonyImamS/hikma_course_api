@@ -4,7 +4,7 @@
   "description": "ini adalah learning api automation saya",
   "main": "index.js",
   "scripts": {
-    "test": "test-api"
+    "test-api": "npx mocha test/**/*.js"
   },
   "repository": {
     "type": "git",
