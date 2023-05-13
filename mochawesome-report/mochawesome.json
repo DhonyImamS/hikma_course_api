@@ -1,0 +1,194 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-13T14:08:09.686Z",
+    "end": "2023-05-13T14:08:11.482Z",
+    "duration": 1796,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "71800937-f9a6-4d32-b322-e777b5de06ab",
+      "title": "",
+      "fullFile": "/Users/dhonyimamsaputra/Downloads/api_automation/test/test_api_user.js",
+      "file": "/test/test_api_user.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2f6e4e02-6aeb-4ecd-80e7-aaad1888fdeb",
+          "title": "Test Suite - API User",
+          "fullFile": "/Users/dhonyimamsaputra/Downloads/api_automation/test/test_api_user.js",
+          "file": "/test/test_api_user.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Test Suite - API User\"",
+              "fullTitle": "Test Suite - API User \"before all\" hook in \"Test Suite - API User\"",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('Bismillah');\nvariable = 'DHONYPRIKITIEW';",
+              "err": {},
+              "uuid": "96c2eaa8-020c-4bd8-abe1-1d760b6a3395",
+              "parentUUID": "2f6e4e02-6aeb-4ecd-80e7-aaad1888fdeb",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook in \"Test Suite - API User\"",
+              "fullTitle": "Test Suite - API User \"before each\" hook in \"Test Suite - API User\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('Start on Every TestCase');",
+              "err": {},
+              "uuid": "8d2ba908-0bf1-44de-8151-8350a5266c09",
+              "parentUUID": "2f6e4e02-6aeb-4ecd-80e7-aaad1888fdeb",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "testID1 | test api reqres create user",
+              "fullTitle": "Test Suite - API User testID1 | test api reqres create user",
+              "timedOut": false,
+              "duration": 637,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// test automation code here \n        const namaUser = variable;\n        const jobUser = 'Tester';\n        const bodyRequest = apiData.createUserData(namaUser, jobUser);\n\n        const response = await apiUser.createUser(bodyRequest);\n        console.log(response.status);\n        console.log(response.body);\n\n        expect(response.status).to.equal(201);\n        expect(response.body.name).to.equal(namaUser);\n        expect(response.body.job).to.equal(jobUser);",
+              "err": {},
+              "uuid": "17f8a950-1a5e-41eb-a613-c4389b28d1e9",
+              "parentUUID": "2f6e4e02-6aeb-4ecd-80e7-aaad1888fdeb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "testID2 | test api reqres create user with invalid format such as direct body \"hahahahaha\"",
+              "fullTitle": "Test Suite - API User testID2 | test api reqres create user with invalid format such as direct body \"hahahahaha\"",
+              "timedOut": false,
+              "duration": 262,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// test automation code here \nconst invalidBodyRequest = {\n    name: 'Dhony',\n};\nconst response = await apiUser.createUser2(invalidBodyRequest);\nconsole.log(response.status);\nconsole.log(response.body);\nexpect(response.status).to.equal(422);",
+              "err": {},
+              "uuid": "9594f1ca-63a7-4d87-b301-2bd29a5cf1a5",
+              "parentUUID": "2f6e4e02-6aeb-4ecd-80e7-aaad1888fdeb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "testID2 | test api reqres create user with invalid format such as direct body \"hahahahaha\"",
+              "fullTitle": "Test Suite - API User testID2 | test api reqres create user with invalid format such as direct body \"hahahahaha\"",
+              "timedOut": false,
+              "duration": 390,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// test automation code here \nconst bodyRequest = apiData.collectionDataTest;\nfor (const key in bodyRequest) {\n    const response = await apiUser.createUser2(bodyRequest[key]);\n    console.log(response.status);\n    console.log(response.body);\n    expect(response.status).to.equal(422);\n}",
+              "err": {},
+              "uuid": "8e24b750-aaf9-4d6f-933c-2f7b3201277b",
+              "parentUUID": "2f6e4e02-6aeb-4ecd-80e7-aaad1888fdeb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "testID3 | test api reqres create user with valid raw json file",
+              "fullTitle": "Test Suite - API User testID3 | test api reqres create user with valid raw json file",
+              "timedOut": false,
+              "duration": 497,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// test automation code here \nconst response = await apiUser.createUser(apiDataUserValidJSON);\nconsole.log(response.status);\nconsole.log(response.body);\nexpect(response.status).to.equal(201);",
+              "err": {},
+              "uuid": "51559cc7-17d4-4644-bdd4-485c8d4868eb",
+              "parentUUID": "2f6e4e02-6aeb-4ecd-80e7-aaad1888fdeb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "17f8a950-1a5e-41eb-a613-c4389b28d1e9",
+            "9594f1ca-63a7-4d87-b301-2bd29a5cf1a5",
+            "8e24b750-aaf9-4d6f-933c-2f7b3201277b",
+            "51559cc7-17d4-4644-bdd4-485c8d4868eb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1786,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
